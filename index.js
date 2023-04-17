@@ -28,11 +28,10 @@ Array.prototype.findIndexCustom = function (callback) {
   for (let i = 0; i < this.length; i++) {
     const isTrue = callback(this[i])
     if (isTrue) {
-      console.log(isTrue)
       return i
     }
-    return -1
   }
+  return -1
 }
 
 const data = ages.findIndexCustom(function (element) {
